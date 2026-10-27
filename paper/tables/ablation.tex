@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{HZMetro ablation: MAE (mean $\pm$ std over 3 seeds) under the 200-epoch schedule used for all main results and under a shorter 100-epoch schedule. The final model was fixed on validation before the test evaluation.}
+\label{tab:ablation}
+\footnotesize
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{200 epochs} & \multicolumn{2}{c}{100 epochs} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Model & Val & Test & Val & Test \\
+\midrule
+PVCGN & 22.53\tiny{$\pm$0.15} & 23.85\tiny{$\pm$0.10} & 24.40\tiny{$\pm$0.36} & 25.84\tiny{$\pm$0.48} \\
++P & 20.93\tiny{$\pm$0.04} & 21.72\tiny{$\pm$0.09} & 21.26\tiny{$\pm$0.05} & 21.69\tiny{$\pm$0.03} \\
+PT-PVCGN (+P+T) & 21.20\tiny{$\pm$0.12} & 22.06\tiny{$\pm$0.09} & 21.03\tiny{$\pm$0.04} & 21.86\tiny{$\pm$0.01} \\
+\bottomrule
+\end{tabular}
+\end{table}

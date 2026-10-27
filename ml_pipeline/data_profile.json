@@ -1,0 +1,129 @@
+{
+  "schema_version": "1",
+  "created": "2026-10-22",
+  "shape": {
+    "n_rows": 2080208,
+    "n_cols": 8,
+    "memory_mb": 284.12,
+    "sampled": true,
+    "sample_rows": 200000
+  },
+  "target": {
+    "name": "inflow",
+    "task": "regression",
+    "n_classes": null,
+    "class_balance": null,
+    "minority_frac": null
+  },
+  "columns": {
+    "city": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 2,
+      "unique_frac": 0.0,
+      "n_levels": 2,
+      "top": {
+        "sh": 0.9294,
+        "hz": 0.0706
+      }
+    },
+    "split_released": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 3,
+      "unique_frac": 0.0,
+      "n_levels": 3,
+      "top": {
+        "train": 0.6773,
+        "test": 0.2252,
+        "val": 0.0976
+      }
+    },
+    "timestamp": {
+      "kind": "datetime",
+      "missing_frac": 0.0,
+      "n_unique": 8541,
+      "unique_frac": 0.0041,
+      "start": "2016-07-01",
+      "end": "2019-01-25"
+    },
+    "station": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 288,
+      "unique_frac": 0.0001,
+      "min": 0.0,
+      "median": 132.0,
+      "max": 287.0,
+      "skew": 0.1124,
+      "outlier_frac": 0.0
+    },
+    "inflow": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 5373,
+      "unique_frac": 0.0026,
+      "min": 0.0,
+      "median": 118.0,
+      "max": 8233.0,
+      "skew": 7.0864,
+      "outlier_frac": 0.0854
+    },
+    "outflow": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 4427,
+      "unique_frac": 0.0021,
+      "min": 0.0,
+      "median": 113.0,
+      "max": 6189.0,
+      "skew": 4.8136,
+      "outlier_frac": 0.0922
+    },
+    "slot": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 73,
+      "unique_frac": 0.0,
+      "min": 0.0,
+      "median": 36.0,
+      "max": 72.0,
+      "skew": 0.0018,
+      "outlier_frac": 0.0
+    },
+    "day_of_week": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 7,
+      "unique_frac": 0.0,
+      "min": 0.0,
+      "median": 3.0,
+      "max": 6.0,
+      "skew": -0.0121,
+      "outlier_frac": 0.0
+    }
+  },
+  "duplicates": {
+    "exact_row_frac": 0.0
+  },
+  "constant_columns": [],
+  "high_cardinality_categoricals": [],
+  "datetime_columns": [
+    "timestamp"
+  ],
+  "time_col": "timestamp",
+  "group_col": null,
+  "entity_candidates": [],
+  "leakage_suspects": [],
+  "traits": {
+    "n_rows": 2080208,
+    "n_features": 7,
+    "task": "regression",
+    "minority_frac": null,
+    "has_datetime": true,
+    "has_groups": false,
+    "small_data": false,
+    "imbalanced": false,
+    "high_card_categoricals": []
+  }
+}

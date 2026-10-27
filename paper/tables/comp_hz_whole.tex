@@ -1,0 +1,28 @@
+\begin{table*}[t]
+\centering
+\caption{Quantitative comparison on the whole HZMetro test set. All our deep models use the same 200-epoch schedule (3 seeds). $^\dagger$Reported in~\cite{liu2022pvcgn} on the same test split (not re-run). HA: historical average; SN: seasonal naive (same-type reference day). Our deep models: mean over seeds.}
+\label{tab:hz-whole}
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{cc|cccc|cccc|ccc}
+\toprule
+Time & Metric & HA & SN & Ridge & GBDT & DCRNN$^\dagger$ & GCRNN$^\dagger$ & Graph-WaveNet$^\dagger$ & PVCGN$^\dagger$ & PVCGN & +P & PT-PVCGN \\
+\midrule
+\multirow{3}{*}{15 min} & RMSE & 53.89 & 52.17 & 40.88 & 43.83 & 40.39 & 40.24 & 40.78 & 37.76 & 37.69 & \textbf{34.99} & 35.37 \\
+ & MAE & 30.01 & 27.98 & 24.44 & 25.87 & 23.76 & 23.84 & 24.07 & 22.68 & 22.67 & \textbf{21.41} & 21.68 \\
+ & MAPE & 15.81\% & 16.43\% & 14.50\% & 14.40\% & 14.00\% & 14.08\% & 14.27\% & 13.70\% & 13.58\% & \textbf{12.90\%} & 13.12\% \\
+\midrule
+\multirow{3}{*}{30 min} & RMSE & 53.86 & 52.21 & 42.74 & 45.19 & 42.57 & 41.95 & 42.80 & 39.34 & 39.40 & \textbf{35.15} & 35.73 \\
+ & MAE & 30.03 & 28.03 & 25.41 & 26.73 & 25.22 & 25.14 & 25.48 & 23.33 & 23.51 & \textbf{21.62} & 21.93 \\
+ & MAPE & 15.93\% & 16.71\% & 15.44\% & 14.89\% & 14.99\% & 14.86\% & 15.23\% & 13.81\% & 13.88\% & \textbf{13.22\%} & 13.30\% \\
+\midrule
+\multirow{3}{*}{45 min} & RMSE & 53.75 & 52.17 & 44.86 & 46.12 & 46.26 & 45.53 & 45.84 & 40.95 & 40.94 & \textbf{35.44} & 36.12 \\
+ & MAE & 29.96 & 27.98 & 26.38 & 27.24 & 26.97 & 26.82 & 27.15 & 24.22 & 24.36 & \textbf{21.84} & 22.15 \\
+ & MAPE & 16.12\% & 17.09\% & 16.79\% & 15.39\% & 16.19\% & 16.05\% & 17.34\% & 14.45\% & 14.57\% & 13.78\% & \textbf{13.73\%} \\
+\midrule
+\multirow{3}{*}{60 min} & RMSE & 53.65 & 52.16 & 47.44 & 47.66 & 49.35 & 50.28 & 49.89 & 42.61 & 42.18 & \textbf{36.02} & 36.79 \\
+ & MAE & 29.83 & 27.90 & 27.60 & 27.87 & 28.47 & 28.75 & 29.14 & 24.93 & 24.84 & \textbf{22.03} & 22.45 \\
+ & MAPE & 16.55\% & 17.70\% & 19.32\% & 16.18\% & 18.16\% & 17.89\% & 19.37\% & 15.49\% & 15.55\% & \textbf{14.29\%} & 14.52\% \\
+\bottomrule
+\end{tabular}
+\end{table*}

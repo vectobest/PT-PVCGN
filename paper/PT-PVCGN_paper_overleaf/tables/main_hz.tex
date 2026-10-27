@@ -1,0 +1,27 @@
+\begin{table*}[t]
+\centering
+\caption{Test results on HZMetro (mean $\pm$ std over 3 seeds for trained deep models; all deep models use the same 200-epoch schedule). Baselines are deterministic.}
+\label{tab:hz}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccccccccc}
+\toprule
+ & \multicolumn{3}{c}{15 min} & \multicolumn{3}{c}{30 min} & \multicolumn{3}{c}{45 min} & \multicolumn{3}{c}{60 min} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} \cmidrule(lr){11-13}
+Method & MAE & RMSE & MAPE & MAE & RMSE & MAPE & MAE & RMSE & MAPE & MAE & RMSE & MAPE \\
+\midrule
+Persistence & 43.78 & 81.78 & 22.23\% & 64.75 & 124.96 & 33.16\% & 86.47 & 167.01 & 50.84\% & 105.07 & 200.73 & 84.63\% \\
+Historical average & 30.01 & 53.89 & 15.81\% & 30.03 & 53.86 & 15.93\% & 29.96 & 53.75 & 16.12\% & 29.83 & 53.65 & 16.55\% \\
+Seasonal naive (same-type day) & 27.98 & 52.17 & 16.43\% & 28.03 & 52.21 & 16.71\% & 27.98 & 52.17 & 17.09\% & 27.90 & 52.16 & 17.70\% \\
+Seasonal naive (weekly) & 31.14 & 51.42 & 17.91\% & 31.15 & 51.40 & 18.06\% & 31.07 & 51.31 & 18.27\% & 30.94 & 51.22 & 18.75\% \\
+GBDT (lags + references) & 25.87 & 43.83 & 14.40\% & 26.73 & 45.19 & 14.89\% & 27.24 & 46.12 & 15.39\% & 27.87 & 47.66 & 16.18\% \\
+Ridge (lags + references) & 24.44 & 40.88 & 14.50\% & 25.41 & 42.74 & 15.44\% & 26.38 & 44.86 & 16.79\% & 27.60 & 47.44 & 19.32\% \\
+\midrule
+PVCGN, reported in~\cite{liu2022pvcgn} & 22.68 & 37.76 & 13.70\% & 23.33 & 39.34 & 13.81\% & 24.22 & 40.95 & 14.45\% & 24.93 & 42.61 & 15.49\% \\
+PVCGN, re-trained & 22.67\tiny{$\pm$0.17} & 37.69\tiny{$\pm$0.38} & 13.58\%\tiny{$\pm$0.06} & 23.51\tiny{$\pm$0.04} & 39.40\tiny{$\pm$0.20} & 13.88\%\tiny{$\pm$0.13} & 24.36\tiny{$\pm$0.11} & 40.94\tiny{$\pm$0.20} & 14.57\%\tiny{$\pm$0.02} & 24.84\tiny{$\pm$0.10} & 42.18\tiny{$\pm$0.21} & 15.55\%\tiny{$\pm$0.03} \\
+\midrule
++P (ours, ablation) & 21.41\tiny{$\pm$0.06} & 34.99\tiny{$\pm$0.20} & 12.90\%\tiny{$\pm$0.20} & 21.62\tiny{$\pm$0.17} & 35.15\tiny{$\pm$0.47} & 13.22\%\tiny{$\pm$0.21} & 21.84\tiny{$\pm$0.09} & 35.44\tiny{$\pm$0.26} & 13.78\%\tiny{$\pm$0.18} & 22.03\tiny{$\pm$0.07} & 36.02\tiny{$\pm$0.14} & 14.29\%\tiny{$\pm$0.11} \\
+PT-PVCGN (ours) & \textbf{21.68\tiny{$\pm$0.11}} & \textbf{35.37\tiny{$\pm$0.30}} & \textbf{13.12\%\tiny{$\pm$0.05}} & \textbf{21.93\tiny{$\pm$0.11}} & \textbf{35.73\tiny{$\pm$0.29}} & \textbf{13.30\%\tiny{$\pm$0.03}} & \textbf{22.15\tiny{$\pm$0.09}} & \textbf{36.12\tiny{$\pm$0.20}} & \textbf{13.73\%\tiny{$\pm$0.04}} & \textbf{22.45\tiny{$\pm$0.07}} & \textbf{36.79\tiny{$\pm$0.22}} & \textbf{14.52\%\tiny{$\pm$0.11}} \\
+\bottomrule
+\end{tabular}
+\end{table*}

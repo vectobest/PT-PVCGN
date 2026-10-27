@@ -1,0 +1,10 @@
+reference_PVCGN/
+.venv/
+__pycache__/
+*.pt
+checkpoints/
+.DS_Store
+node_modules/
+presentation/apply_theme.js
+# derived from the PVCGN authors' data (no redistribution license); rebuild with ml_pipeline/02_prep.py
+ml_pipeline/*/features.npz

@@ -1,0 +1,15 @@
+\begin{table*}[t]
+\centering
+\caption{Test MAE (mean over 4 horizons and over seeds) on operational slices. Rush hours: 07:30--09:30 and 17:30--19:30. Top-1/4: busiest quarter of stations by training ridership. SH holiday: Mid-Autumn Festival (Sep 15--17, 2016); SH make-up: Sunday Sep 18, 2016, an official working day.}
+\label{tab:slices}
+\footnotesize
+\begin{tabular}{lcccccccc}
+\toprule
+Model & HZ rush & HZ top-1/4 & SH rush & SH top-1/4 & SH work & SH non-work & SH holiday & SH make-up \\
+\midrule
+Ridge & 30.56 & 47.77 & 34.10 & 48.21 & 26.04 & 24.77 & 24.41 & \textbf{29.23} \\
+PVCGN (re-trained) & 31.39 & 40.65 & 38.86 & 48.22 & 29.61 & \textbf{23.10} & \textbf{21.48} & 29.41 \\
+PT-PVCGN & \textbf{28.93} & \textbf{37.59} & \textbf{33.90} & \textbf{44.31} & \textbf{24.48} & 23.32 & 24.49 & 33.69 \\
+\bottomrule
+\end{tabular}
+\end{table*}

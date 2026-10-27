@@ -1,0 +1,28 @@
+\begin{table*}[t]
+\centering
+\caption{Quantitative comparison on the top 1/4 high-ridership stations of the SHMetro test set. Our PVCGN and PT-PVCGN are trained for 30 epochs (2 seeds); +P was not trained on SHMetro; $^\dagger$models were trained for 200 epochs. $^\dagger$Reported in~\cite{liu2022pvcgn} on the same test split (not re-run). HA: historical average; SN: seasonal naive (same-type reference day). Our deep models: mean over seeds.}
+\label{tab:sh-top}
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{cc|cccc|cccc|cc}
+\toprule
+Time & Metric & HA & SN & Ridge & GBDT & DCRNN$^\dagger$ & GCRNN$^\dagger$ & Graph-WaveNet$^\dagger$ & PVCGN$^\dagger$ & PVCGN & PT-PVCGN \\
+\midrule
+\multirow{3}{*}{15 min} & RMSE & 118.06 & 137.31 & 81.01 & 94.06 & 84.04 & 86.09 & 76.93 & \textbf{74.80} & 77.70 & 78.54 \\
+ & MAE & 63.21 & 71.47 & 45.73 & 48.42 & 44.98 & 45.89 & 43.31 & \textbf{41.38} & 43.44 & 41.86 \\
+ & MAPE & 16.06\% & 17.99\% & 12.15\% & 11.93\% & 13.76\% & 14.12\% & 11.68\% & \textbf{10.62\%} & 11.67\% & 11.08\% \\
+\midrule
+\multirow{3}{*}{30 min} & RMSE & 117.96 & 137.28 & 84.48 & 96.70 & 88.52 & 89.89 & 84.23 & \textbf{79.43} & 85.36 & 83.20 \\
+ & MAE & 62.92 & 71.35 & 47.09 & 49.56 & 46.80 & 47.50 & 46.32 & \textbf{43.05} & 46.49 & 43.51 \\
+ & MAPE & 16.44\% & 18.48\% & 13.80\% & 12.63\% & 14.47\% & 14.82\% & 13.12\% & \textbf{11.46\%} & 13.11\% & 11.93\% \\
+\midrule
+\multirow{3}{*}{45 min} & RMSE & 117.90 & 137.43 & 89.35 & 100.91 & 97.75 & 96.81 & 96.35 & \textbf{87.32} & 93.11 & 87.81 \\
+ & MAE & 62.57 & 71.31 & 49.06 & 51.29 & 49.84 & 50.08 & 50.76 & 45.67 & 49.74 & \textbf{45.28} \\
+ & MAPE & 16.67\% & 18.93\% & 16.51\% & 13.35\% & 16.32\% & 16.70\% & 15.50\% & \textbf{12.48\%} & 14.54\% & 13.00\% \\
+\midrule
+\multirow{3}{*}{60 min} & RMSE & 117.79 & 137.78 & 93.67 & 104.17 & 106.03 & 102.93 & 109.26 & 93.59 & 101.48 & \textbf{91.05} \\
+ & MAE & 62.29 & 71.42 & 50.95 & 52.77 & 53.30 & 52.79 & 55.74 & 48.02 & 53.21 & \textbf{46.58} \\
+ & MAPE & 16.78\% & 19.20\% & 18.87\% & 13.91\% & 17.89\% & 18.16\% & 18.27\% & \textbf{13.61\%} & 16.30\% & 13.80\% \\
+\bottomrule
+\end{tabular}
+\end{table*}

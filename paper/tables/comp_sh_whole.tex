@@ -1,0 +1,28 @@
+\begin{table*}[t]
+\centering
+\caption{Quantitative comparison on the whole SHMetro test set. Our PVCGN and PT-PVCGN are trained for 30 epochs (2 seeds); +P was not trained on SHMetro; $^\dagger$models were trained for 200 epochs. $^\dagger$Reported in~\cite{liu2022pvcgn} on the same test split (not re-run). HA: historical average; SN: seasonal naive (same-type reference day). Our deep models: mean over seeds.}
+\label{tab:sh-whole}
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{cc|cccc|cccc|cc}
+\toprule
+Time & Metric & HA & SN & Ridge & GBDT & DCRNN$^\dagger$ & GCRNN$^\dagger$ & Graph-WaveNet$^\dagger$ & PVCGN$^\dagger$ & PVCGN & PT-PVCGN \\
+\midrule
+\multirow{3}{*}{15 min} & RMSE & 67.38 & 76.89 & 47.52 & 53.97 & 46.02 & 46.09 & 46.98 & \textbf{44.97} & 47.67 & 46.08 \\
+ & MAE & 32.25 & 35.73 & 24.56 & 25.72 & 24.04 & 24.26 & 24.91 & 23.29 & 25.19 & \textbf{22.98} \\
+ & MAPE & 20.12\% & 23.28\% & 17.29\% & \textbf{16.80\%} & 17.82\% & 18.06\% & 20.05\% & 16.83\% & 19.27\% & 17.19\% \\
+\midrule
+\multirow{3}{*}{30 min} & RMSE & 67.36 & 76.99 & 49.45 & 55.51 & 49.90 & 50.12 & 51.64 & \textbf{47.83} & 52.31 & 48.68 \\
+ & MAE & 32.12 & 35.75 & 25.15 & 26.21 & 25.23 & 25.42 & 26.53 & 24.16 & 26.75 & \textbf{23.78} \\
+ & MAPE & 20.25\% & 23.59\% & 18.24\% & \textbf{17.21\%} & 18.35\% & 18.73\% & 20.38\% & 17.23\% & 19.94\% & 17.69\% \\
+\midrule
+\multirow{3}{*}{45 min} & RMSE & 67.31 & 77.15 & 52.03 & 57.71 & 54.92 & 54.87 & 58.50 & 52.02 & 56.55 & \textbf{51.09} \\
+ & MAE & 31.91 & 35.76 & 26.00 & 26.86 & 26.76 & 26.92 & 28.78 & 25.33 & 28.21 & \textbf{24.51} \\
+ & MAPE & 20.37\% & 23.90\% & 19.68\% & \textbf{17.65\%} & 19.30\% & 19.81\% & 21.99\% & 17.92\% & 20.56\% & 18.39\% \\
+\midrule
+\multirow{3}{*}{60 min} & RMSE & 67.15 & 77.35 & 54.30 & 59.37 & 58.83 & 58.67 & 65.08 & 55.27 & 60.86 & \textbf{52.84} \\
+ & MAE & 31.70 & 35.78 & 26.78 & 27.43 & 28.01 & 28.18 & 30.90 & 26.29 & 29.63 & \textbf{25.08} \\
+ & MAPE & 20.43\% & 24.11\% & 20.75\% & \textbf{18.09\%} & 20.44\% & 21.07\% & 24.36\% & 18.69\% & 21.97\% & 18.92\% \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,10 @@
+torch==2.14.1
+numpy==2.5.4
+pandas==3.1.0
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+marimo==0.25.2
+PyYAML==6.0.3
+# only for tests/test_equivalence.py (runs the authors' original PVCGN code)
+torch-geometric==2.8.1

@@ -1,0 +1,3 @@
+[W 261024 18:20:28 manager:557] Encountered error when searching for config: [Errno 13] Permission denied: '/Users/nitinbharti/.config/marimo'
+[W 261024 18:20:28 manager:557] Encountered error when searching for config: [Errno 13] Permission denied: '/Users/nitinbharti/.config/marimo'
+exit 0

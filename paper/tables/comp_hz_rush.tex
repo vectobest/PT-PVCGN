@@ -1,0 +1,28 @@
+\begin{table*}[t]
+\centering
+\caption{Quantitative comparison during rush hours (07:30--09:30 and 17:30--19:30) on the HZMetro test set. All our deep models use the same 200-epoch schedule (3 seeds). $^\dagger$Reported in~\cite{liu2022pvcgn} on the same test split (not re-run). HA: historical average; SN: seasonal naive (same-type reference day). Our deep models: mean over seeds.}
+\label{tab:hz-rush}
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{cc|cccc|cccc|ccc}
+\toprule
+Time & Metric & HA & SN & Ridge & GBDT & DCRNN$^\dagger$ & GCRNN$^\dagger$ & Graph-WaveNet$^\dagger$ & PVCGN$^\dagger$ & PVCGN & +P & PT-PVCGN \\
+\midrule
+\multirow{3}{*}{15 min} & RMSE & 57.25 & 69.22 & 47.19 & 51.11 & 54.17 & 55.51 & 56.98 & 49.79 & 47.38 & \textbf{45.13} & 45.78 \\
+ & MAE & 33.11 & 35.79 & 29.54 & 30.82 & 35.08 & 35.68 & 37.19 & 32.63 & 29.62 & \textbf{28.13} & 28.56 \\
+ & MAPE & 10.64\% & 11.89\% & 10.17\% & 10.15\% & 10.37\% & 10.36\% & 10.84\% & 9.72\% & 10.12\% & \textbf{9.65\%} & 9.75\% \\
+\midrule
+\multirow{3}{*}{30 min} & RMSE & 57.25 & 69.22 & 47.74 & 51.36 & 58.27 & 57.34 & 59.71 & 51.63 & 49.00 & \textbf{44.84} & 45.78 \\
+ & MAE & 33.11 & 35.79 & 29.99 & 31.22 & 37.48 & 37.31 & 38.94 & 33.30 & 30.69 & \textbf{28.11} & 28.70 \\
+ & MAPE & 10.64\% & 11.89\% & 10.34\% & 10.26\% & 10.69\% & 10.54\% & 11.04\% & \textbf{9.52\%} & 10.32\% & 9.66\% & 9.79\% \\
+\midrule
+\multirow{3}{*}{45 min} & RMSE & 57.25 & 69.22 & 49.42 & 52.22 & 61.83 & 59.54 & 59.83 & 51.45 & 51.09 & \textbf{44.95} & 46.18 \\
+ & MAE & 33.11 & 35.79 & 30.97 & 31.89 & 37.95 & 37.58 & 38.75 & 32.73 & 32.14 & \textbf{28.25} & 29.04 \\
+ & MAPE & 10.64\% & 11.89\% & 10.68\% & 10.51\% & 11.16\% & 11.16\% & 11.83\% & 9.88\% & 10.76\% & \textbf{9.74\%} & 9.95\% \\
+\midrule
+\multirow{3}{*}{60 min} & RMSE & 57.25 & 69.22 & 50.84 & 53.18 & 59.52 & 58.88 & 59.96 & 51.09 & 53.59 & \textbf{45.59} & 46.88 \\
+ & MAE & 33.11 & 35.79 & 31.76 & 32.26 & 36.27 & 35.94 & 37.49 & 31.43 & 33.10 & \textbf{28.44} & 29.41 \\
+ & MAPE & 10.64\% & 11.89\% & 10.91\% & 10.58\% & 11.94\% & 11.93\% & 12.35\% & 10.43\% & 10.96\% & \textbf{9.80\%} & 10.02\% \\
+\bottomrule
+\end{tabular}
+\end{table*}
